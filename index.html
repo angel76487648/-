@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>신앙점검 테스트 (나는 천국에 갈 수 있나?)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-bottom: 1px dashed #ddd;
+    }
+    label {
+      cursor: pointer;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007aff;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    .result-box {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      min-height: 50px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>신앙점검 테스트<br>(나는 천국에 갈 수 있나?)</h1>
+  <p>다음의 질문들을 읽고 동그라미에 체크하세요...!<br>
+  나는 천국에 갈 수 있는지 지금의 영적상태를 점검해 드립니다.</p>
+
+  <form id="faithTest">
+
+    <!-- 질문1 -->
+    <div class="question">
+      <p>질문1. 당신은 예수님을 당신의 구세주로 믿나요?</p>
+      <label><input type="radio" name="q1" value="1"> 1. 예, 믿습니다.</label><br>
+      <label><input type="radio" name="q1" value="2"> 2. 아니오, 믿지 않습니다.</label>
+    </div>
+
+    <!-- 질문2 -->
+    <div class="question">
+      <p>질문2. 당신은 1년 52주 중에 몇 주정도 교회에 빠지나요?</p>
+      <label><input type="radio" name="q2" value="1"> 1. 전혀 빠지지 않습니다.</label><br>
+      <label><input type="radio" name="q2" value="2"> 2. 일 년에 1-2번 정도 빠집니다.</label><br>
+      <label><input type="radio" name="q2" value="3"> 3. 일 년에 5번-10번 정도 빠집니다.</label><br>
+      <label><input type="radio" name="q2" value="4"> 4. 일 년에 절반 정도 빠집니다.</label><br>
+      <label><input type="radio" name="q2" value="5"> 5. 일 년 중 못 가는 때가 더 많습니다.</label>
+    </div>
+
+    <!-- 질문3 -->
+    <div class="question">
+      <p>질문3. 당신은 방언을 할 수 있나요?</p>
+      <label><input type="radio" name="q3" value="1"> 1. 예, 할 수 있습니다.</label><br>
+      <label><input type="radio" name="q3" value="2"> 2. 아니오, 할 수 없습니다.</label><br>
+      <label><input type="radio" name="q3" value="3"> 3. 예전에는 할 수 있었는데, 지금은 할 수 없습니다.</label>
+    </div>
+
+    <!-- 질문4 -->
+    <div class="question">
+      <p>질문4. 당신은 동성애를 지지하나요? 반대하나요?</p>
+      <label><input type="radio" name="q4" value="1"> 1. 동성애는 옳지 못하므로 반대합니다.</label><br>
+      <label><input type="radio" name="q4" value="2"> 2. 동성애를 적극 지지합니다.</label><br>
+      <label><input type="radio" name="q4" value="3"> 3. 동성애를 하는 것은 자유이므로 자유의사에 맡겨야 한다고 생각합니다.</label>
+    </div>
+
+    <!-- 질문5 -->
+    <div class="question">
+      <p>질문5. 교회를 빠지면 어떤 기분이 드나요?</p>
+      <label><input type="radio" name="q5" value="1"> 1. 교회를 빠지면 허전한 느낌이 듭니다.</label><br>
+      <label><input type="radio" name="q5" value="2"> 2. 교회를 빠져도 별로 허전한 느낌은 들지 않습니다. 그냥 다음에 가면 되지 뭐...</label>
+    </div>
+
+    <!-- 질문6 -->
+    <div class="question">
+      <p>질문6. 당신은 기독교 이외에 불교와 힌두교, 유교, 이슬람교에도 구원이 있다고 생각하나요?</p>
+      <label><input type="radio" name="q6" value="1"> 1. 예, 모든 종교에 구원이 있다고 생각합니다.</label><br>
+      <label><input type="radio" name="q6" value="2"> 2. 아니오, 기독교에만 구원이 있다고 생각합니다.</label>
+    </div>
+
+    <!-- 질문7 -->
+    <div class="question">
+      <p>질문7. 당신은 음주를 하나요? 음주를 한다면 어느 정도 인가요?</p>
+      <label><input type="radio" name="q7" value="1"> 1. 음주를 전혀 하지 않습니다.</label><br>
+      <label><input type="radio" name="q7" value="2"> 2. 음주를 약간 합니다.</label><br>
+      <label><input type="radio" name="q7" value="3"> 3. 음주를 자주 하는 편입니다.</label><br>
+      <label><input type="radio" name="q7" value="4"> 4. 음주를 자주 하는 편이고, 술에 자주 취하고 실수를 합니다.</label>
+    </div>
+
+    <!-- 질문8 -->
+    <div class="question">
+      <p>질문8. 당신은 도둑질을 하고 있나요?</p>
+      <label><input type="radio" name="q8" value="1"> 1. 예, 가끔씩 합니다.</label><br>
+      <label><input type="radio" name="q8" value="2"> 2. 아니오, 전혀 하지 않습니다.</label>
+    </div>
+
+    <!-- 질문9 -->
+    <div class="question">
+      <p>질문9. 당신은 결혼 이외의 상황에서 성적인 접촉을 하고 있나요?</p>
+      <label><input type="radio" name="q9" value="1"> 1. 예, 가끔씩 합니다.</label><br>
+      <label><input type="radio" name="q9" value="2"> 2. 아니오, 전혀 하지 않습니다.</label><br>
+      <label><input type="radio" name="q9" value="3"> 3. 예전에는 있지만 지금은 그렇지 않습니다.</label>
+    </div>
+
+    <!-- 질문10 -->
+    <div class="question">
+      <p>질문10. 당신은 최근에 점을 치거나, 타로점을 치거나 한 적이 있나요?</p>
+      <label><input type="radio" name="q10" value="1"> 1. 예, 가끔씩 합니다.</label><br>
+      <label><input type="radio" name="q10" value="2"> 2. 아니오, 전혀 하지 않습니다.</label><br>
+      <label><input type="radio" name="q10" value="3"> 3. 예전에는 있지만 지금은 그렇지 않습니다.</label>
+    </div>
+
+    <!-- 질문11 -->
+    <div class="question">
+      <p>질문11. 당신은 가끔씩 거짓말을 하나요?</p>
+      <label><input type="radio" name="q11" value="1"> 1. 예, 가끔씩 합니다.</label><br>
+      <label><input type="radio" name="q11" value="2"> 2. 아니오, 전혀 하지 않습니다.</label><br>
+      <label><input type="radio" name="q11" value="3"> 3. 예전에는 거짓말을 했지만 지금은 하지 않습니다.</label>
+    </div>
+
+    <!-- 질문12 -->
+    <div class="question">
+      <p>질문12. 당신은 동성애를 한 적이 있거나 지금 하나요?</p>
+      <label><input type="radio" name="q12" value="1"> 1. 예, 가끔씩 합니다.</label><br>
+      <label><input type="radio" name="q12" value="2"> 2. 아니오, 전혀 하지 않습니다.</label><br>
+      <label><input type="radio" name="q12" value="3"> 3. 예전에는 했지만 지금은 하지 않습니다.</label>
+    </div>
+
+  </form>
+
+  <!-- 결과확인 버튼 (직사각형 돌출형) -->
+  <div id="resultButton" class="button">결과확인</div>
+
+  <!-- 결과 표시 영역 -->
+  <div id="result" class="result-box"></div>
+
+  <!-- 효과음용 audio 태그 (효과음 파일 URL은 실제 사용하시는 파일로 변경하세요) -->
+  <audio id="checkSound">
+    <source src="https://example.com/check-sound.mp3" type="audio/mp3">
+  </audio>
+  <audio id="resultSound">
+    <source src="https://example.com/result-sound.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    // 효과음 재생 함수
+    function playSound(id) {
+      var sound = document.getElementById(id);
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play();
+      }
+    }
+
+    // 모든 라디오 버튼에 '뽁 뽁~' 효과음을 위한 이벤트 추가
+    var radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        playSound('checkSound');
+      });
+    });
+
+    // 점수 계산 함수
+    function calculateScore() {
+      var score = 0;
+      var form = document.getElementById('faithTest');
+
+      // 질문1: 답변2일 때 200점 (답변1은 0점)
+      var q1 = form.elements['q1'].value;
+      if(q1 === "2") { score += 200; }
+
+      // 질문2
+      var q2 = form.elements['q2'].value;
+      if(q2 === "2") { score += 10; }
+      else if(q2 === "3") { score += 20; }
+      else if(q2 === "4") { score += 30; }
+      else if(q2 === "5") { score += 40; }
+
+      // 질문3
+      var q3 = form.elements['q3'].value;
+      if(q3 === "2") { score += 10; }
+      else if(q3 === "3") { score += 100; }
+
+      // 질문4
+      var q4 = form.elements['q4'].value;
+      if(q4 === "2") { score += 200; }
+      else if(q4 === "3") { score += 70; }
+
+      // 질문5
+      var q5 = form.elements['q5'].value;
+      if(q5 === "2") { score += 30; }
+
+      // 질문6
+      var q6 = form.elements['q6'].value;
+      if(q6 === "1") { score += 100; }
+
+      // 질문7
+      var q7 = form.elements['q7'].value;
+      if(q7 === "2") { score += 20; }
+      else if(q7 === "3") { score += 30; }
+      else if(q7 === "4") { score += 100; }
+
+      // 질문8
+      var q8 = form.elements['q8'].value;
+      if(q8 === "1") { score += 100; }
+
+      // 질문9
+      var q9 = form.elements['q9'].value;
+      if(q9 === "1") { score += 100; }
+      else if(q9 === "3") { score += 30; }
+
+      // 질문10
+      var q10 = form.elements['q10'].value;
+      if(q10 === "1") { score += 50; }
+      else if(q10 === "3") { score += 20; }
+
+      // 질문11
+      var q11 = form.elements['q11'].value;
+      if(q11 === "1") { score += 20; }
+      else if(q11 === "3") { score += 10; }
+
+      // 질문12
+      var q12 = form.elements['q12'].value;
+      if(q12 === "1") { score += 200; }
+      else if(q12 === "3") { score += 70; }
+
+      return score;
+    }
+
+    // 결과 표시 함수
+    function showResult() {
+      playSound('resultSound');
+      var score = calculateScore();
+      var resultText = "당신의 점수: " + score + "\n\n";
+
+      if (score <= 30) {
+        resultText += "당신은 현재 상황에서 천국에 갈 수 있습니다. 그러나, 좀더 하나님께 온전해 지는 노력은 필요합니다!";
+      } else if (score >= 100 && score <= 190) {
+        resultText += "지금 현재상태로는 천국에 갈 수 없습니다...회개하고 돌이켜야 천국에 갈 수 있습니다.";
+      } else if (score >= 200) {
+        resultText += "당신은 크게 회개하고 돌이켜야 합니다...지금 현재로는 천국에 갈 수 없습니다";
+      } else {
+        resultText += "점수에 해당하는 결과가 없습니다. 모든 질문에 답변했는지 확인해 주세요.";
+      }
+      document.getElementById('result').innerText = resultText;
+    }
+
+    // 결과확인 버튼 클릭 시 처리
+    document.getElementById('resultButton').addEventListener('click', function() {
+      var form = document.getElementById('faithTest');
+      var allAnswered = true;
+      // 1번부터 12번까지 모두 체크되었는지 확인
+      for (var i = 1; i <= 12; i++) {
+        if (!form.elements['q' + i].value) {
+          allAnswered = false;
+          break;
+        }
+      }
+      if (!allAnswered) {
+        alert("모든 질문에 답변해 주세요!");
+        return;
+      }
+      showResult();
+    });
+  </script>
+
+</body>
+</html>
